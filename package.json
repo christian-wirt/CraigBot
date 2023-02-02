@@ -1,0 +1,36 @@
+{
+  "name": "discord-bots",
+  "version": "1.0.0",
+  "description": "making a shane bowersux.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node deploy-commands.js && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "16.x",
+    "npm": "7.x"
+  },
+  "author": "Christian Wirt",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.6.0",
+    "@discordjs/opus": "^0.6.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.6.0",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.1.0",
+    "dotenv": "^16.0.3",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "libsodium-wrappers": "^0.7.9",
+    "opusscript": "^0.0.8",
+    "sodium": "^3.0.2",
+    "tweetnacl": "^1.0.3",
+    "yt-search": "^2.10.1",
+    "ytdl-core": "^4.11.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
