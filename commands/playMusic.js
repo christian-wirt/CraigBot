@@ -49,6 +49,21 @@ module.exports = {
 				connection.subscribe(player);
 				player.play(resource);
 
+				console.log('playing');
+
+				const networkStateChangeHandler = (oldNetworkState, newNetworkState) => {
+					const newUdp = Reflect.get(newNetworkState, 'udp');
+					clearInterval(newUdp?.keepAliveInterval);
+				};
+
+				connection.on('stateChange', (oldState, newState) => {
+					const oldNetworking = Reflect.get(oldState, 'networking');
+					const newNetworking = Reflect.get(newState, 'networking');
+
+					oldNetworking?.off('stateChange', networkStateChangeHandler);
+					newNetworking?.on('stateChange', networkStateChangeHandler);
+				});
+
 			}
 			catch (err) {
 				console.error(err);

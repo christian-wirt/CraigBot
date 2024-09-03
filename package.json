@@ -28,7 +28,7 @@
     "sodium": "^3.0.2",
     "tweetnacl": "^1.0.3",
     "yt-search": "^2.10.1",
-    "ytdl-core": "^4.11.2"
+    "ytdl-core": "^4.10.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0"
